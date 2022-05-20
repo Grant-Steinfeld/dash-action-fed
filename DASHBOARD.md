@@ -8,3 +8,11 @@ Friday
 
 ## time:
 21:30
+
+## data
+w
+I
+R
+g
+L
+
