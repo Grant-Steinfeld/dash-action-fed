@@ -10,9 +10,11 @@ $d = [datetime]::ParseExact(
 
 $exactTime = Get-Date $d -UFormat %R
 
+$dataGen = Get-Content -Raw ./data.txt
+
 $data = Get-Content -Raw ./template.md
 $data = $data.replace("{psTime}", $psTime)
 $data = $data.replace("{todayDay}", $todayDay)
 $data = $data.replace("{exactTime}", $exactTime)
-
+$data = $data.replace("{dataGen}", $dataGen)
 $data | Set-Content -Encoding utf8 ./DASHBOARD.md
