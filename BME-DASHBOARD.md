@@ -9,10 +9,8 @@ Monday
 ## time:
 21:30
 
-## data
-r
-i
-H
-j
-M
+## TEMP C
+
+
+## TEMP F
 
