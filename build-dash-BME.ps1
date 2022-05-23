@@ -16,6 +16,6 @@ $data = Get-Content -Raw ./template-BME.md
 $data = $data.replace("{psTime}", $psTime)
 $data = $data.replace("{todayDay}", $todayDay)
 $data = $data.replace("{exactTime}", $exactTime)
-$data = $data.replace("{tempC}", $dataJSON.tempC)
-$data = $data.replace("{tempF}", $dataJSON.tempF)
+$data = $data.replace("{tempC}", $dataJSON["tempC"])
+$data = $data.replace("{tempF}",  $dataJSON["tempF"])
 $data | Set-Content -Encoding utf8 ./BME-DASHBOARD.md
