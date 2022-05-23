@@ -11,7 +11,7 @@ $d = [datetime]::ParseExact(
 $exactTime = Get-Date $d -UFormat %R
 
 $dataGen = Get-Content -Raw ./BME.json
-$dataJSON = ConvertFrom-json $dataGen
+$dataJSON = ConvertFrom-json $dataGen -AsHashtable
 $data = Get-Content -Raw ./template-BME.md
 $data = $data.replace("{psTime}", $psTime)
 $data = $data.replace("{todayDay}", $todayDay)
