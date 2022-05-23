@@ -14,3 +14,7 @@
 
 ## TEMP F
 {tempF}
+
+
+## Humidity
+{humidity}
