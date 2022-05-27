@@ -1,8 +1,7 @@
 
-Get-Content ./BME.json
 
-git add ./BME.json
-git commit -m "BME off the local mac"
+git add ./climate.xlsx
+git commit -m "BME xlsx push off the pi"
 
 git pull
 git push origin main    
