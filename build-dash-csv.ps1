@@ -23,5 +23,5 @@ $data = Get-Content -Raw ./template-BME.md
 # $data = $data.replace("{todayDay}", $todayDay)
 # $data = $data.replace("{exactTime}",
  #$exactTime)
- $data = $data.replace("{csv}", $table.toString()
+ $data = $data.replace("{csv}", $table.toString())
  $data | Set-Content -Encoding utf8 ./BME-DASHBOARD.md
