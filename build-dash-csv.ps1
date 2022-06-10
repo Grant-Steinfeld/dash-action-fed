@@ -14,8 +14,8 @@ $Header = 'humidity','temp','gas','timestamp','ts'
 $path = "/home/pi/dev/dash-action-fed/data_cap/study_bme_1.csv"
 $csvData = Import-Csv -Header $Header -Path $path
 
-$table = $csvData | format-table
-
+# $table = $csvData | format-table
+$table = Get-Content -Raw $path
 
 $data = Get-Content -Raw ./template-BME.md
 #$data
@@ -23,5 +23,5 @@ $data = Get-Content -Raw ./template-BME.md
 # $data = $data.replace("{todayDay}", $todayDay)
 # $data = $data.replace("{exactTime}",
  #$exactTime)
- $data = $data.replace("{csv}", $table)
+ $data = $data.replace("{csv}", $table.toString()
  $data | Set-Content -Encoding utf8 ./BME-DASHBOARD.md
