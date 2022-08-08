@@ -1,7 +1,7 @@
 ## Dashboard
 
 ### Today is:
-Tuesday
+Monday
 
 ## psTime:
 13
